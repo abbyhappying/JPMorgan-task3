@@ -55,9 +55,6 @@ class Graph extends Component<IProps, {}> {
 
   componentDidUpdate() {
     if (this.table) {
-      // const generatedRow = DataManipulator.generateRow(this.props.data);
-      // const rowAsArray = Object.entries(generatedRow).map(([key, value]) => ({ [key]: value }));
-      // this.table.update(rowAsArray);
       this.table.update([
         DataManipulator.generateRow(this.props.data),] as unknown as TableData);
     }
